@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class EmpoloyeeLearinngConfig(AppConfig):
+class EmployeeLearingConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "empoloyee_learinng"
+    name = "employee_learning"
