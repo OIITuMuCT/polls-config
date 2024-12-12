@@ -13,3 +13,8 @@ class Division(models.Model):
 
     def __str__(self):
         return self.div_name
+
+# Example model choices
+class ModelName(models.Model):
+    LIST = [('H', 'High'), ('M', 'Medium'), ('L', 'Low'),]
+    field_name = models.CharField(choices=LIST)
