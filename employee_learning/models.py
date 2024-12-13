@@ -10,6 +10,7 @@ class Division(models.Model):
     def __str__(self):
         return self.div_name
 
+# One-To-Many
 class Employee(models.Model):
     PRIORITIES = [('H', 'High'), ('M', 'Medium'), ('L', 'Low'),]
     name = models.CharField(max_length=25, verbose_name="Employee Name")
@@ -19,9 +20,21 @@ class Employee(models.Model):
     def __str__(self):
         return f'{self.id}: {self.name}'
 
-
+# One-To-One 
 class PersonalInfo(models.Model):
     name = models.OneToOneField(Employee, on_delete=models.CASCADE, primary_key=True)
     tel = models.CharField(max_length=15)
     address = models.CharField(max_length=50)
     
+    def __str__(self):
+        return self.name
+
+# Many-To-Many
+class LearningCourse(models.Model):
+    LEVEL = [('B', 'Basic'), ('I', 'Intermediate'), ('A', 'Advanced')]
+    title = models.CharField(max_length=50, unique=True)
+    level = models.CharField(max_length=1, choices=LEVEL)
+    employee = models.ManyToManyField(Employee)
+    
+    def __str__(self):
+        return self.title
