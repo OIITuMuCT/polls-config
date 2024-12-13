@@ -26,12 +26,12 @@ class PersonalInfo(models.Model):
     tel = models.CharField(max_length=15)
     address = models.CharField(max_length=50)
     
-    def __str__(self):
-        return self.name
+    # def __str__(self):
+    #     return self.name
 
 # Many-To-Many
 class LearningCourse(models.Model):
-    LEVEL = [('B', 'Basic'), ('I', 'Intermediate'), ('A', 'Advanced')]
+    LEVEL = [('B', 'Basic'), ('I', 'Intermediate'), ('A', 'Advanced'),]
     title = models.CharField(max_length=50, unique=True)
     level = models.CharField(max_length=1, choices=LEVEL)
     employee = models.ManyToManyField(Employee)
