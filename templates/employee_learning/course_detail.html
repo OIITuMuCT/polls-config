@@ -1,3 +1,9 @@
 <h1>DETAIL Page</h1>
 <p>Course Title : {{course_object.title}}</p>
 <p>Level : {{course_object.level}} ({{course_object.get_level_display}})</p>
+<p>Assigned Employees : </p>
+
+{% for emp in object.employee.all %}
+    <p>{{emp.name}} : {{emp.division}}</p>
+{% endfor %}
+
