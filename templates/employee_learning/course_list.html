@@ -1,7 +1,6 @@
+{% extends "base.html" %}
 
-<div>
-    <a href="{% url "course_list" %}">List</a>
-    <a href="{% url "course_create" %}">Create</a>
+{% block body %}
     <h1>LIST Page</h1>
     {% for course in object_list %}
         <p>{{ course.title|upper }}</p>
@@ -9,5 +8,4 @@
         <a href="{% url "course_detail" course.pk %}">Go Detail</a>
         <hr>
     {% endfor %}
-</div>
-
+{% endblock %}
