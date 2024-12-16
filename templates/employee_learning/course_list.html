@@ -1,1 +1,10 @@
-<h1>LIST Page</h1>
+
+<div>
+    <h1>LIST Page</h1>
+    {% for course in object_list %}
+        <p>{{ course.title|upper }}</p>
+        <p>{{course.level}} ({{course.get_level_display}})</p>
+        <hr>
+    {% endfor %}
+</div>
+
