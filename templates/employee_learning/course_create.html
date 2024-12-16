@@ -1,3 +1,6 @@
+<a href="{% url "course_list" %}">List</a>
+<a href="{% url "course_create" %}">Create</a>
+
 <h1>CREATE Page</h1>
 <form method="post"> {% csrf_token %}
     {{form.as_p}}

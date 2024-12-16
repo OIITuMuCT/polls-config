@@ -6,4 +6,6 @@
 {% for emp in object.employee.all %}
     <p>{{emp.name}} : {{emp.division}}</p>
 {% endfor %}
+<a href="{% url "course_update" object.pk%}">Update</a>
+<a href="{% url "course_delete" object.pk%}">Delete</a>
 

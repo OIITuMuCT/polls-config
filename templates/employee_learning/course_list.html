@@ -1,9 +1,12 @@
 
 <div>
+    <a href="{% url "course_list" %}">List</a>
+    <a href="{% url "course_create" %}">Create</a>
     <h1>LIST Page</h1>
     {% for course in object_list %}
         <p>{{ course.title|upper }}</p>
         <p>{{course.level}} ({{course.get_level_display}})</p>
+        <a href="{% url "course_detail" course.pk %}">Go Detail</a>
         <hr>
     {% endfor %}
 </div>
