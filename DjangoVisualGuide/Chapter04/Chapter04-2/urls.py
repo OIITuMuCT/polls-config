@@ -1,4 +1,4 @@
-from django.urls import path
+# from django.urls import path
 
 
 # Add path to link with config/urls.py under the app directory e.g,
