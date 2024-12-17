@@ -3,6 +3,7 @@
 {% block body %}
 <div class="container text-center">
     <h1 class="text-center m-5">LIST Page</h1>
+    <p clacc="text-muted text-center mb-5">As of {{ today }}</p>
     {% for course in object_list %}
     <div class="card m-1 d-inline-flex" style="width: 18rem; hight: 10rem;">
         <div class="card-body">

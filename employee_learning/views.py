@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import datetime
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import LearningCourse
 from django.urls import reverse_lazy
@@ -14,7 +15,8 @@ class CourseList(ListView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        print(context)
+        context['today'] = datetime.date.today()
+        return context
 
 class CourseDetail(DetailView):
     template_name = 'employee_learning/course_detail.html'
