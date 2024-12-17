@@ -7,10 +7,14 @@ from django.urls import reverse_lazy
 class CourseList(ListView):
     
     # model = LearningCourse
-    # queryset = LearningCourse.objects.order_by('-title')
-    queryset = LearningCourse.objects.filter(level='B')
+    queryset = LearningCourse.objects.order_by('-title')
+    # queryset = LearningCourse.objects.filter(title__contains='Docker')
     template_name = 'employee_learning/course_list.html'
     context_object_name = 'course_object_list'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        print(context)
 
 class CourseDetail(DetailView):
     template_name = 'employee_learning/course_detail.html'
