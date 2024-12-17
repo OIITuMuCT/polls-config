@@ -5,7 +5,7 @@
     {% for course in object_list %}
         <p>{{ course.title|upper }}</p>
         <p>{{course.level}} ({{course.get_level_display}})</p>
-        <a href="{% url "course_detail" course.pk %}">Go Detail</a>
+        <a href="{% url "course_detail" course.pk %}" class="btn btn-primary">Go Detail</a>
         <hr>
     {% endfor %}
 {% endblock %}
