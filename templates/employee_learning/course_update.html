@@ -1,5 +1,15 @@
-<h1>UPDATE Page</h1>
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+<div class="container w-50 text-center">
+<h1 class="m-5 text-center">UPDATE Page</h1>
 <form method="post"> {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Update" class="btn btn-warning">
+    {{form|crispy}}
+    <input type="submit" value="Update" class="btn btn-primary 
+    d-block mx-auto">
 </form>
+</div>
+
+{% endblock %}
+
