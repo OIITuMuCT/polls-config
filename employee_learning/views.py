@@ -5,8 +5,10 @@ from django.urls import reverse_lazy
 
 
 class CourseList(ListView):
+    
+    # model = LearningCourse
+    queryset = LearningCourse.objects.order_by('-title')
     template_name = 'employee_learning/course_list.html'
-    model = LearningCourse
     context_object_name = 'course_object_list'
 
 class CourseDetail(DetailView):
