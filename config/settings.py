@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "192.168.50.44", '127.0.0.1',]
 
+# Template directory path
+TEMPLATE_DIR = BASE_DIR / 'templates'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Application definition
 
@@ -39,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'test_app',
     'employee_learning',
+    'crispy_forms',
+    'crispy_bootstrap5',
     
 ]
 
@@ -54,7 +60,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'config.urls'
 
-TEMPLATE_DIR = BASE_DIR / 'templates'
+
 
 TEMPLATES = [
     {
