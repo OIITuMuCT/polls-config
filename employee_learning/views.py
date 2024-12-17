@@ -7,7 +7,8 @@ from django.urls import reverse_lazy
 class CourseList(ListView):
     
     # model = LearningCourse
-    queryset = LearningCourse.objects.order_by('-title')
+    # queryset = LearningCourse.objects.order_by('-title')
+    queryset = LearningCourse.objects.filter(level='B')
     template_name = 'employee_learning/course_list.html'
     context_object_name = 'course_object_list'
 
