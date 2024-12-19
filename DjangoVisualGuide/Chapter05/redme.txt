@@ -1,0 +1,21 @@
+Chapter 5 
+User Management
+
+Topics
+
+1. User Authenticate
+2. Overview of User Management Functions
+3. User Management Function Development with Django
+4. Approaches to Building Yser Management Function Django
+5. Django Allauth(1) - introduction
+6. Django Allauth(2) - Installation and initial Settings
+7. Django Allauth(3) - Email Verification via Console
+8. Django Allauth(4) - Email Verification via Gmail
+9. Django Allauth(5) - Social Login with GitHub
+10. Django Allauth(6) - Social Login with Google
+11. Django Allauth(7) - Allauth Template File Setup
+12. Django Allauth(8) - Add Basic Styling with Bootstrap and Crispy Forms
+13. Django Allauth(9) - Customize Sing-in and Sign-up Pages
+14. User Models
+15. Login Required - LoginRequiredMixin
+16. User Login Status Icon on Navigation Bar 
