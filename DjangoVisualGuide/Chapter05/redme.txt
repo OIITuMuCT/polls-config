@@ -3,12 +3,23 @@ User Management
 
 Topics
 
-1. User Authenticate
+1. User Authentication
 2. Overview of User Management Functions
+    user model
+        Singup
+        Login
+        @Login
+        Logout
+        Password change & reset
+        User profile update
 3. User Management Function Development with Django
 4. Approaches to Building Yser Management Function Django
 5. Django Allauth(1) - introduction
 6. Django Allauth(2) - Installation and initial Settings
+    install django-allauth
+        django-crispy-forms
+        crispy-bootstrap5
+        django-allauth
 7. Django Allauth(3) - Email Verification via Console
 8. Django Allauth(4) - Email Verification via Gmail
 9. Django Allauth(5) - Social Login with GitHub
