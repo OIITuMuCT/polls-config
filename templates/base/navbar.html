@@ -13,7 +13,16 @@
           <a class="nav-link" href="{% url "course_list" %}">List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url "course_create" %}">Create</a>
+          <a class="nav-link" href="{% url "account_signup" %}">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url "account_login" %}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url "account_logout" %}">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url "account_change_password" %}">Change Password</a>
         </li>
         {% comment %} <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>

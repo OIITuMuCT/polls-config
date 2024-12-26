@@ -49,8 +49,8 @@ ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 
-ACCOUNT_EMAIL_VERIFICATION = "none"
-# ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+# ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_UNIQUE_USERNAME = False
@@ -59,7 +59,7 @@ ACCOUNT_UNIQUE_USERNAME = False
 
 # Email settings from python-decouple
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_BACKEND = ("django.core.mail.backends.console.EmailBackend",)
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = config('EMAIL_HOST_USER')
