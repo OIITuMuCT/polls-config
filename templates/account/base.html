@@ -1,20 +1,41 @@
+{% load i18n %}
+{% include "base/css_link.html" %}
+{% include "base/navbar.html" %}
+{% include "base/footer.html" %}
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
 <head>
+    <h1>Базовый шаблон для аккаунта</h1>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Learning</title>
-{% include "base/css_link.html" %}
+
+    {% include "base/css_link.html" %}
+    <title>{% block head_title %}{% endblock %}</title>
+
 </head>
 <body>
 {% include "base/navbar.html" %}
 {% block body %}
-
+<div>
+    <strong>{% trans "Menus:" %}</strong>
+    <ul>
+        {% if user.is_authenticated %}
+        <li><a href="{% url "account_email" %}">{% trans "Chamge E-mail" %}
+        </a></li>
+        <li><a href="{% url "account_logout" %}">{% trans "Sign Out" %}</a>
+        </li>
+        {% else %}
+        <li><a href="{% url "account_login" %}">{% trans "Sign In" %}</a></li>
+        <li><a href="{% url "account_signup" %}">{% trans "Sign Up" %}</a></li>
+        {% endif %}
+    </ul>
+</div>
+<h1>Базовый шаблон для аккаунта</h1>
 <p>Insert body contents here</p>
 {% endblock %}
 {% include "base/footer.html" %}
 </body>
 </html>
+
 
 
