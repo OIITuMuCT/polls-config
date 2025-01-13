@@ -98,6 +98,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     # list providers for sosial auth
     "allauth.socialaccount.providers.github",
+    'user_profile',
 ]
 
 MIDDLEWARE = [
